@@ -4,8 +4,7 @@
 
 void drinkPotion(int& hp, int healing) {
     hp += healing;
-
-Hp = hp + healing;
+    hp = hp + healing;
 }
 
 // Use pointer to reduce hero's HP:
