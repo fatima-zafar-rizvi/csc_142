@@ -58,16 +58,16 @@ int Calculator::calculate(int a, int b)
 
 int main()
 {
-    Calculator calc1 = { Operation::ADD }; // Okay
+    Calculator calc1 = { Operation::ADD }; 
     std::cout << "ADD: " << calc1.calculate(5, 6) << '\n';
 
-    Calculator calc2{ Operation::SUBTRACT }; // Okay
+    Calculator calc2{ Operation::SUBTRACT }; 
     std::cout << "SUBTRACT: " << calc2.calculate(6, 3) << '\n';
 
-    Calculator calc3(Operation::MULTIPLY); // Okay, but because of the fact of "vexing parse", prefer uniform init.
+    Calculator calc3(Operation::MULTIPLY); 
     std::cout << "MULTIPLY: " << calc3.calculate(5, 5) << '\n';
 
-    Calculator oopsCalc4(); // <-- This won't invoke default constructor!
+    Calculator oopsCalc4(); 
 
     return 0;
 }
