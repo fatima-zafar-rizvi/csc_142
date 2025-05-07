@@ -1,4 +1,5 @@
 #include "FibonacciIterator.h"
+#include "FibonacciRange.h"
 #include "PrimeNumberRange.h"
 
 #include <iostream>
