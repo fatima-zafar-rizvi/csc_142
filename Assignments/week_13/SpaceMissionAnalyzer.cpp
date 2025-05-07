@@ -1,9 +1,8 @@
 #include <iostream>
 #include <cmath>
-#include <iomainip>
+#include <iomanip> // Corrected include directive
 
-int main(){
-
+int main() {
     // Inputs:
     double distance, fuel, spaceship_weight, life_support;
     int crew_size;
@@ -24,7 +23,7 @@ int main(){
     std::cout << "Enter Life support duration available (in days): ";
     std::cin >> life_support;
 
-    // Calulations:
+    // Calculations:
     // 1. Fuel Efficiency (in %):
     double fuel_efficiency = (fuel / spaceship_weight) * 100;
 
@@ -33,17 +32,17 @@ int main(){
 
     // 3. Travel time (in days):
     double travel_time = (distance * 1000000) / speed;
-    // int travel_days = static_cast<int>(std::ceil(travel_time));
- 
+    int travel_days = static_cast<int>(std::ceil(travel_time)); // Uncommented this line
+
     // 4. Check Viability:
-    bool is_variable = (efficiancy >= 20.0) &&
-                       (life_support >= travel_days +10) &&
-                       (crew_size >= 2 && crew_size <=8) &&
-                       (spaceship_weight < 500);
+    bool is_viable = (fuel_efficiency >= 20.0) &&
+                     (life_support >= travel_days + 10) &&
+                     (crew_size >= 2 && crew_size <= 8) &&
+                     (spaceship_weight < 500);
 
     // Outputs:
     std::cout << std::fixed << std::setprecision(2);
-    std::cout << "\nFuel efficiency: " << efficiency << "%\n";
+    std::cout << "\nFuel efficiency: " << fuel_efficiency << "%\n"; // Corrected variable name
 
     std::cout << std::setprecision(0);
     std::cout << "Estimated speed: " << speed << " km/day\n";
